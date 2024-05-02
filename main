@@ -1,0 +1,28 @@
+public class ScaleneTriangle {
+    
+    // Method to check if the triangle is scalene
+    public static boolean isScalene(int side1, int side2, int side3) {
+        return (side1 != side2 && side1 != side3 && side2 != side3);
+    }
+    
+    // Method to check if the triangle meets the angle sum property
+    public static boolean meetsAngleSumProperty(int angle1, int angle2, int angle3) {
+        return (angle1 + angle2 + angle3 == 180);
+    }
+    
+    public static void main(String[] args) {
+        int side1 = 3; // Length of side 1
+        int side2 = 4; // Length of side 2
+        int side3 = 5; // Length of side 3
+        
+        int angle1 = 60; // Measure of angle 1
+        int angle2 = 70; // Measure of angle 2
+        int angle3 = 50; // Measure of angle 3
+        
+        if (isScalene(side1, side2, side3) && meetsAngleSumProperty(angle1, angle2, angle3)) {
+            System.out.println("The triangle is a scalene triangle and meets the angle sum property.");
+        } else {
+            System.out.println("The triangle is not a scalene triangle or does not meet the angle sum property.");
+        }
+    }
+}
